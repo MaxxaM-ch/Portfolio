@@ -9,3 +9,7 @@ export function getActiveSectionId(sections, scrollY, offset = 0) {
 
   return activeId;
 }
+
+export function isScrolledToBottom(scrollY, viewportHeight, documentHeight, threshold = 2) {
+  return scrollY + viewportHeight >= documentHeight - threshold;
+}
