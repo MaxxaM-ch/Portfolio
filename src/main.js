@@ -46,3 +46,10 @@ import { initRevealObserver } from './js/reveal-on-scroll.js';
 
 const revealTargets = Array.from(document.querySelectorAll('.reveal'));
 initRevealObserver(revealTargets);
+
+import { initParallax } from './js/parallax.js';
+
+const heroPattern = document.querySelector('.hero__pattern');
+if (heroPattern) {
+  initParallax(heroPattern, 0.3);
+}
