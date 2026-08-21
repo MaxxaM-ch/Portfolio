@@ -13,3 +13,15 @@ navLinks.querySelectorAll('.navbar__link').forEach((link) => {
     closeNav(navLinks, navToggle);
   });
 });
+
+import { copyEmail, showCopiedFeedback } from './js/copy-email.js';
+
+const emailBox = document.getElementById('email-box');
+const emailText = document.getElementById('email-text');
+
+emailBox.addEventListener('click', () => {
+  const email = emailBox.dataset.email;
+  copyEmail(email).then(() => {
+    showCopiedFeedback(emailText, emailBox);
+  });
+});
