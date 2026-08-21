@@ -25,3 +25,19 @@ emailBox.addEventListener('click', () => {
     showCopiedFeedback(emailText, emailBox);
   });
 });
+
+import { getActiveSectionId } from './js/scroll-spy.js';
+
+const sections = Array.from(document.querySelectorAll('main section[id]'));
+const navAnchors = Array.from(document.querySelectorAll('.navbar__link'));
+const NAV_OFFSET = 90;
+
+function updateActiveLink() {
+  const activeId = getActiveSectionId(sections, window.scrollY, NAV_OFFSET);
+  navAnchors.forEach((anchor) => {
+    anchor.classList.toggle('is-active', anchor.getAttribute('href') === `#${activeId}`);
+  });
+}
+
+window.addEventListener('scroll', updateActiveLink, { passive: true });
+updateActiveLink();
