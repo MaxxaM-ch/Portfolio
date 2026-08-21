@@ -34,7 +34,7 @@ if (emailBox && emailText) {
   });
 }
 
-import { getActiveSectionId } from './js/scroll-spy.js';
+import { getActiveSectionId, isScrolledToBottom } from './js/scroll-spy.js';
 
 const sections = Array.from(document.querySelectorAll('main section[id]'));
 const navAnchors = Array.from(document.querySelectorAll('.navbar__link'));
@@ -42,8 +42,7 @@ const NAV_OFFSET = 90;
 
 if (sections.length && navAnchors.length) {
   const updateActiveLink = () => {
-    const atBottom =
-      window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+    const atBottom = isScrolledToBottom(window.scrollY, window.innerHeight, document.documentElement.scrollHeight);
     const activeId = atBottom
       ? sections[sections.length - 1].id
       : getActiveSectionId(sections, window.scrollY, NAV_OFFSET);
