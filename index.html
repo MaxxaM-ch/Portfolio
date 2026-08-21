@@ -6,7 +6,20 @@
     <title>Prénom Nom — Développeur Web</title>
   </head>
   <body>
-    <header class="navbar" id="navbar"></header>
+    <header class="navbar">
+      <div class="navbar__logo">
+        <img src="/src/assets/logo-m.svg" alt="" />
+        <img src="/src/assets/logo-p.svg" alt="Logo — initiales MP" />
+      </div>
+      <ul class="navbar__links" id="nav-links">
+        <li><a class="navbar__link" href="#about">À propos</a></li>
+        <li><a class="navbar__link" href="#skills">Compétences</a></li>
+        <li><a class="navbar__link" href="#experience">Expériences</a></li>
+        <li><a class="navbar__link" href="#projects">Projets</a></li>
+        <li><a class="navbar__link" href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">☰</button>
+    </header>
     <main></main>
     <footer class="footer"></footer>
     <script type="module" src="/src/main.js"></script>
