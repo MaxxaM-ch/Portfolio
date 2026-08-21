@@ -89,3 +89,80 @@
   font-size: 12px;
   color: $color-secondary;
 }
+
+.skills {
+  padding: $section-padding;
+  background: $color-bg-alt;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $section-padding-mobile;
+  }
+}
+
+.skills__groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill-group__title {
+  font-family: $font-body;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.skill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+
+  &--mastered { background: $color-primary; }
+  &--intermediate { background: $color-secondary; }
+  &--learning { background: rgba($color-text, 0.35); }
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-badge {
+  font-size: 12.5px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &--mastered {
+    background: $color-primary;
+    color: $color-text;
+  }
+
+  &--intermediate {
+    background: transparent;
+    border: 1px solid $color-secondary;
+    color: $color-text;
+  }
+
+  &--learning {
+    background: transparent;
+    border: 1px dashed rgba($color-text, 0.35);
+    color: $color-text-muted;
+  }
+}
