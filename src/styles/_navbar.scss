@@ -46,10 +46,12 @@
     font-style: italic;
     font-size: 20px;
     transform: translateY(-100%);
-    transition: transform 0.3s ease;
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s ease;
 
     &.is-open {
       transform: translateY(0);
+      visibility: visible;
     }
   }
 }
@@ -58,9 +60,14 @@
   cursor: pointer;
   transition: color 0.2s ease;
 
-  &:hover,
+  &:hover {
+    color: $color-text;
+  }
+
   &.is-active {
     color: $color-text;
+    font-weight: 600;
+    border-bottom: 2px solid $color-secondary;
   }
 }
 

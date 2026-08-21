@@ -20,8 +20,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.nav-open {
-  overflow: hidden;
+@media (max-width: $breakpoint-mobile) {
+  body.nav-open {
+    overflow: hidden;
+  }
 }
 
 a {

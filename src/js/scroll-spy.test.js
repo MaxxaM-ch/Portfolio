@@ -8,8 +8,8 @@ describe('getActiveSectionId', () => {
     { id: 'skills', offsetTop: 1200 },
   ];
 
-  it('returns null when scroll is above every section (accounting for offset)', () => {
-    expect(getActiveSectionId(sections, 0, 90)).toBe(null);
+  it('activates the hero section at the top of the page (offset already accounted for)', () => {
+    expect(getActiveSectionId(sections, 0, 90)).toBe('hero');
   });
 
   it('returns the first section once scrolled past its offset-adjusted top', () => {
