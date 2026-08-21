@@ -41,3 +41,8 @@ function updateActiveLink() {
 
 window.addEventListener('scroll', updateActiveLink, { passive: true });
 updateActiveLink();
+
+import { initRevealObserver } from './js/reveal-on-scroll.js';
+
+const revealTargets = Array.from(document.querySelectorAll('.reveal'));
+initRevealObserver(revealTargets);
