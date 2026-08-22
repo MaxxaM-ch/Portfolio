@@ -63,12 +63,24 @@
   color: $color-text-muted;
   font-size: 14px;
   line-height: 1.7;
+
+  p + p {
+    margin-top: 14px;
+  }
+
+  strong {
+    color: $color-text;
+  }
 }
 
 .about__stats {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.about__soft-skills {
+  margin-top: 32px;
 }
 
 .stat {
