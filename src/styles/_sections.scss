@@ -242,6 +242,41 @@
   max-width: 480px;
 }
 
+.timeline__subitems {
+  margin-top: 20px;
+  padding-left: 20px;
+  border-left: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.timeline__subtitle {
+  font-family: $font-heading;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.timeline__list {
+  list-style: disc;
+  padding-left: 18px;
+  font-size: 13px;
+  color: $color-text-muted;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.timeline__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .projects {
   padding: $section-padding;
   background: $color-bg-alt;
