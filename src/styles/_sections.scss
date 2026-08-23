@@ -63,12 +63,24 @@
   color: $color-text-muted;
   font-size: 14px;
   line-height: 1.7;
+
+  p + p {
+    margin-top: 14px;
+  }
+
+  strong {
+    color: $color-text;
+  }
 }
 
 .about__stats {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.about__soft-skills {
+  margin-top: 32px;
 }
 
 .stat {
@@ -230,6 +242,41 @@
   max-width: 480px;
 }
 
+.timeline__subitems {
+  margin-top: 20px;
+  padding-left: 20px;
+  border-left: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.timeline__subtitle {
+  font-family: $font-heading;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.timeline__list {
+  list-style: disc;
+  padding-left: 18px;
+  font-size: 13px;
+  color: $color-text-muted;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.timeline__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .projects {
   padding: $section-padding;
   background: $color-bg-alt;
@@ -296,6 +343,72 @@
   border-radius: 20px;
 }
 
+.education {
+  padding: $section-padding;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $section-padding-mobile;
+  }
+}
+
+.education__intro {
+  color: $color-text-muted;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+.education__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.education-card {
+  background: $color-panel;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: 20px 22px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: $color-primary;
+  }
+}
+
+.education-card__level {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $color-secondary;
+  margin-bottom: 10px;
+}
+
+.education-card__title {
+  font-family: $font-heading;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.education-card__school {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.education-card__meta {
+  font-size: 12px;
+  color: $color-text-muted;
+}
+
 .contact {
   padding: $section-padding;
   text-align: center;
@@ -350,13 +463,18 @@
 .social-links {
   display: flex;
   gap: 16px;
+  align-items: center;
   justify-content: center;
-  font-size: 13px;
   color: $color-text-muted;
 }
 
 .social-link {
+  display: inline-flex;
   transition: color 0.2s ease;
+
+  svg {
+    fill: currentColor;
+  }
 
   &:hover {
     color: $color-text;

@@ -34,6 +34,22 @@ if (emailBox && emailText) {
   });
 }
 
+const phoneBox = document.getElementById('phone-box');
+const phoneText = document.getElementById('phone-text');
+
+if (phoneBox && phoneText) {
+  phoneBox.addEventListener('click', () => {
+    const phone = phoneBox.dataset.phone;
+    copyEmail(phone)
+      .then(() => {
+        showCopiedFeedback(phoneText, phoneBox);
+      })
+      .catch(() => {
+        showCopyFailedFeedback(phoneText, phoneBox);
+      });
+  });
+}
+
 import { getActiveSectionId, isScrolledToBottom } from './js/scroll-spy.js';
 
 const sections = Array.from(document.querySelectorAll('main section[id]'));
