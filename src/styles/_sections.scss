@@ -343,6 +343,72 @@
   border-radius: 20px;
 }
 
+.education {
+  padding: $section-padding;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $section-padding-mobile;
+  }
+}
+
+.education__intro {
+  color: $color-text-muted;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+.education__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.education-card {
+  background: $color-panel;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: 20px 22px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: $color-primary;
+  }
+}
+
+.education-card__level {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $color-secondary;
+  margin-bottom: 10px;
+}
+
+.education-card__title {
+  font-family: $font-heading;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.education-card__school {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.education-card__meta {
+  font-size: 12px;
+  color: $color-text-muted;
+}
+
 .contact {
   padding: $section-padding;
   text-align: center;
