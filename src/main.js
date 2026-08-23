@@ -57,16 +57,34 @@ const navAnchors = Array.from(document.querySelectorAll('.navbar__link'));
 const NAV_OFFSET = 90;
 
 if (sections.length && navAnchors.length) {
+  const NAV_CLICK_SUPPRESS_MS = 700;
+  let suppressUntil = 0;
+
+  const setActiveLink = (id) => {
+    navAnchors.forEach((anchor) => {
+      anchor.classList.toggle('is-active', anchor.getAttribute('href') === `#${id}`);
+    });
+  };
+
   const updateActiveLink = () => {
+    if (Date.now() < suppressUntil) {
+      return;
+    }
+
     const atBottom = isScrolledToBottom(window.scrollY, window.innerHeight, document.documentElement.scrollHeight);
     const activeId = atBottom
       ? sections[sections.length - 1].id
       : getActiveSectionId(sections, window.scrollY, NAV_OFFSET);
 
-    navAnchors.forEach((anchor) => {
-      anchor.classList.toggle('is-active', anchor.getAttribute('href') === `#${activeId}`);
-    });
+    setActiveLink(activeId);
   };
+
+  navAnchors.forEach((anchor) => {
+    anchor.addEventListener('click', () => {
+      setActiveLink(anchor.getAttribute('href').slice(1));
+      suppressUntil = Date.now() + NAV_CLICK_SUPPRESS_MS;
+    });
+  });
 
   window.addEventListener('scroll', updateActiveLink, { passive: true });
   updateActiveLink();
@@ -81,7 +99,16 @@ if (revealTargets.length) {
 
 import { initParallax } from './js/parallax.js';
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const heroPattern = document.querySelector('.hero__pattern');
-if (heroPattern) {
+if (heroPattern && !prefersReducedMotion) {
   initParallax(heroPattern, 0.3);
+}
+
+import { initCursorTrail } from './js/cursor-trail.js';
+
+const heroSection = document.querySelector('.hero');
+if (heroSection && !prefersReducedMotion) {
+  initCursorTrail(heroSection);
 }
