@@ -99,7 +99,16 @@ if (revealTargets.length) {
 
 import { initParallax } from './js/parallax.js';
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 const heroPattern = document.querySelector('.hero__pattern');
-if (heroPattern) {
+if (heroPattern && !prefersReducedMotion) {
   initParallax(heroPattern, 0.3);
+}
+
+import { initCursorTrail } from './js/cursor-trail.js';
+
+const heroSection = document.querySelector('.hero');
+if (heroSection && !prefersReducedMotion) {
+  initCursorTrail(heroSection);
 }

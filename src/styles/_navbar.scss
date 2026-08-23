@@ -35,6 +35,11 @@
       -3px 3px 0 rgba($color-primary, 0.7),
       -4px 4px 8px rgba(0, 0, 0, 0.45);
   }
+
+  &:active {
+    transform: translate(0, 0);
+    text-shadow: none;
+  }
 }
 
 .navbar__links {
