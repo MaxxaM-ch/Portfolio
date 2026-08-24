@@ -10,10 +10,60 @@
 .hero__pattern {
   position: absolute;
   inset: -20% 0 0 0;
-  background-image: radial-gradient($dot-color 1px, transparent 1px);
-  background-size: $dot-size $dot-size;
+  overflow: hidden;
   pointer-events: none;
   will-change: transform;
+}
+
+.hero__pattern-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: $color-primary;
+}
+
+.hero__pattern-dot--white {
+  background: $color-text;
+}
+
+.hero__pattern-dot--bob {
+  animation-name: hero-dot-wave;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.hero__pattern-dot--twinkle {
+  animation-name: hero-dot-twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hero-dot-wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hero-dot-twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__pattern-dot--bob,
+  .hero__pattern-dot--twinkle {
+    animation: none;
+  }
 }
 
 .hero__content {

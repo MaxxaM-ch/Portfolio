@@ -106,6 +106,12 @@ if (heroPattern && !prefersReducedMotion) {
   initParallax(heroPattern, 0.3);
 }
 
+import { initHeroDotsWave } from './js/hero-dots-wave.js';
+
+if (heroPattern) {
+  initHeroDotsWave(heroPattern);
+}
+
 import { initCursorTrail } from './js/cursor-trail.js';
 
 const heroSection = document.querySelector('.hero');
