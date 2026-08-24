@@ -112,3 +112,10 @@ const heroSection = document.querySelector('.hero');
 if (heroSection && !prefersReducedMotion) {
   initCursorTrail(heroSection);
 }
+
+import { initCardGlare } from './js/card-glare.js';
+
+const statCards = Array.from(document.querySelectorAll('.stat'));
+if (statCards.length) {
+  initCardGlare(statCards);
+}

@@ -100,6 +100,7 @@
   color: $color-text-muted;
   font-size: 14px;
   line-height: 1.7;
+  text-align: justify;
 
   p + p {
     margin-top: 14px;
@@ -121,10 +122,54 @@
 }
 
 .stat {
-  border: 1px solid $color-border;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba($color-text, 0.15);
   border-radius: 6px;
   padding: 16px 18px;
-  background: $color-panel;
+  background: rgba($color-text, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba($color-text, 0.35),
+    inset 0 -1px 0 rgba($color-text, 0.08),
+    inset 0 0 24px 8px rgba($color-text, 0.05);
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba($color-text, 0.6), transparent);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba($color-text, 0.12), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow:
+      0 12px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba($color-text, 0.45),
+      inset 0 -1px 0 rgba($color-text, 0.1),
+      inset 0 0 28px 10px rgba($color-text, 0.07);
+
+    &::after {
+      opacity: 1;
+    }
+  }
 }
 
 .stat__value {
