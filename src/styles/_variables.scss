@@ -14,7 +14,8 @@ $font-body: 'Manrope', sans-serif;
 
 // Layout
 $breakpoint-mobile: 768px;
-$section-padding: 64px 32px;
+$content-max-width: 1100px;
+$section-padding: 64px max(32px, calc((100% - #{$content-max-width}) / 2));
 $section-padding-mobile: 48px 20px;
 
 // Pattern
