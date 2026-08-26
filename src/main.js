@@ -19,33 +19,31 @@ if (navLinks && navToggle) {
 import { copyEmail, showCopiedFeedback, showCopyFailedFeedback } from './js/copy-email.js';
 
 const emailBox = document.getElementById('email-box');
-const emailText = document.getElementById('email-text');
 
-if (emailBox && emailText) {
+if (emailBox) {
   emailBox.addEventListener('click', () => {
     const email = emailBox.dataset.email;
     copyEmail(email)
       .then(() => {
-        showCopiedFeedback(emailText, emailBox);
+        showCopiedFeedback(emailBox);
       })
       .catch(() => {
-        showCopyFailedFeedback(emailText, emailBox);
+        showCopyFailedFeedback(emailBox);
       });
   });
 }
 
 const phoneBox = document.getElementById('phone-box');
-const phoneText = document.getElementById('phone-text');
 
-if (phoneBox && phoneText) {
+if (phoneBox) {
   phoneBox.addEventListener('click', () => {
     const phone = phoneBox.dataset.phone;
     copyEmail(phone)
       .then(() => {
-        showCopiedFeedback(phoneText, phoneBox);
+        showCopiedFeedback(phoneBox);
       })
       .catch(() => {
-        showCopyFailedFeedback(phoneText, phoneBox);
+        showCopyFailedFeedback(phoneBox);
       });
   });
 }
