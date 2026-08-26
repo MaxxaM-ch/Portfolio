@@ -121,7 +121,7 @@ if (heroSection && !prefersReducedMotion) {
 
 import { initCardGlare } from './js/card-glare.js';
 
-const glareCards = Array.from(document.querySelectorAll('.stat, .timeline-card'));
+const glareCards = Array.from(document.querySelectorAll('.stat, .timeline-card, .education-card'));
 if (glareCards.length) {
   initCardGlare(glareCards);
 }
