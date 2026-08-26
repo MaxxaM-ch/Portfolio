@@ -119,7 +119,15 @@ if (heroSection && !prefersReducedMotion) {
 
 import { initCardGlare } from './js/card-glare.js';
 
-const glareCards = Array.from(document.querySelectorAll('.stat, .timeline-card, .education-card'));
+const glareCards = Array.from(document.querySelectorAll('.stat, .timeline-card, .education-card, .back-to-top'));
 if (glareCards.length) {
   initCardGlare(glareCards);
+}
+
+import { initBackToTop } from './js/back-to-top.js';
+
+const contactSection = document.getElementById('contact');
+const backToTopButton = document.getElementById('back-to-top');
+if (contactSection && backToTopButton) {
+  initBackToTop(contactSection, backToTopButton);
 }
