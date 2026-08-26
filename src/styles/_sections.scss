@@ -667,6 +667,24 @@
   margin: 0 auto 20px;
 }
 
+.contact__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 16px;
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.contact__or {
+  font-size: 12px;
+  color: $color-text-muted;
+}
+
 .email-box {
   display: inline-flex;
   align-items: center;
@@ -677,29 +695,27 @@
   padding: 12px 20px;
   border-radius: 6px;
   font-size: 14px;
-  margin-bottom: 12px;
   transition: border-color 0.2s ease;
 
   &:hover,
   &.is-copied {
     border-color: $color-primary;
   }
+
+  &.is-copy-failed {
+    border-color: rgba($color-text, 0.4);
+  }
+}
+
+.email-box--icon {
+  padding: 12px;
 }
 
 .email-box__hint {
+  display: inline-flex;
+  align-items: center;
   color: $color-secondary;
   font-size: 12px;
-}
-
-.contact__mailto-fallback {
-  display: block;
-  font-size: 12px;
-  color: $color-text-muted;
-  margin-bottom: 24px;
-
-  &:hover {
-    color: $color-text;
-  }
 }
 
 .social-links {
