@@ -27,7 +27,9 @@ describe('toggleNav', () => {
 
     expect(isOpen).toBe(true);
     expect(navEl.classList.contains('is-open')).toBe(true);
+    expect(toggleBtnEl.classList.contains('is-open')).toBe(true);
     expect(toggleBtnEl.getAttribute('aria-expanded')).toBe('true');
+    expect(toggleBtnEl.getAttribute('aria-label')).toBe('Fermer le menu');
     expect(document.body.classList.contains('nav-open')).toBe(true);
   });
 
@@ -37,7 +39,9 @@ describe('toggleNav', () => {
 
     expect(isOpen).toBe(false);
     expect(navEl.classList.contains('is-open')).toBe(false);
+    expect(toggleBtnEl.classList.contains('is-open')).toBe(false);
     expect(toggleBtnEl.getAttribute('aria-expanded')).toBe('false');
+    expect(toggleBtnEl.getAttribute('aria-label')).toBe('Ouvrir le menu');
     expect(document.body.classList.contains('nav-open')).toBe(false);
   });
 });
@@ -51,7 +55,9 @@ describe('closeNav', () => {
     closeNav(navEl, toggleBtnEl);
 
     expect(navEl.classList.contains('is-open')).toBe(false);
+    expect(toggleBtnEl.classList.contains('is-open')).toBe(false);
     expect(toggleBtnEl.getAttribute('aria-expanded')).toBe('false');
+    expect(toggleBtnEl.getAttribute('aria-label')).toBe('Ouvrir le menu');
     expect(document.body.classList.contains('nav-open')).toBe(false);
   });
 });
