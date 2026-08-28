@@ -1,4 +1,13 @@
 import './styles/main.scss';
+
+import { experiences } from './data/experiences.js';
+import { renderTimeline } from './js/render-timeline.js';
+
+const timelineEl = document.getElementById('timeline');
+if (timelineEl) {
+  timelineEl.innerHTML = renderTimeline(experiences);
+}
+
 import { toggleNav, closeNav } from './js/nav-toggle.js';
 
 const navLinks = document.getElementById('nav-links');
