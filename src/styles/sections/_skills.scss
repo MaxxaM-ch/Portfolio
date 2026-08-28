@@ -1,12 +1,9 @@
 @use '../variables' as *;
+@use '../mixins' as *;
 
 .skills {
-  padding: $section-padding;
+  @include section-padding;
   background: $color-bg-alt;
-
-  @media (max-width: $breakpoint-mobile) {
-    padding: $section-padding-mobile;
-  }
 }
 
 .skills__groups {
