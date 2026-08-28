@@ -75,7 +75,7 @@
   position: absolute;
   z-index: 2;
   transform: translate(-50%, -50%);
-  font-size: 14px;
+  font-size: $font-size-base;
   color: $color-secondary;
   text-shadow:
     0 0 6px rgba($color-secondary, 0.9),
@@ -97,7 +97,7 @@
 }
 
 .hero__name {
-  font-size: 46px;
+  font-size: $font-size-4xl;
   margin: 6px 0 14px;
 }
 
@@ -117,7 +117,7 @@
   color: $color-text-muted;
   max-width: 420px;
   margin: 0 auto 26px;
-  font-size: 15px;
+  font-size: $font-size-md;
 }
 
 .hero__actions {

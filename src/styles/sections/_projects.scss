@@ -42,12 +42,12 @@
 }
 
 .project-card__title {
-  font-size: 16px;
+  font-size: $font-size-md;
   margin-bottom: 6px;
 }
 
 .project-card__desc {
-  font-size: 12.5px;
+  font-size: $font-size-sm;
   color: $color-text-muted;
   margin-bottom: 10px;
 }
@@ -59,7 +59,7 @@
 }
 
 .tag {
-  font-size: 10.5px;
+  font-size: $font-size-xs;
   background: rgba($color-secondary, 0.12);
   color: $color-secondary;
   padding: 3px 8px;

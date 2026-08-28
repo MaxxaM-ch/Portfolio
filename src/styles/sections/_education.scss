@@ -10,7 +10,7 @@
 
 .education__intro {
   color: $color-text-muted;
-  font-size: 14px;
+  font-size: $font-size-base;
   line-height: 1.7;
   text-align: justify;
   margin-bottom: 28px;
@@ -78,7 +78,7 @@
 }
 
 .education-card__level {
-  font-size: 11px;
+  font-size: $font-size-xs;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: $color-secondary;
@@ -89,17 +89,17 @@
   font-family: $font-heading;
   font-style: italic;
   font-weight: 600;
-  font-size: 16px;
+  font-size: $font-size-md;
   margin-bottom: 8px;
 }
 
 .education-card__school {
-  font-size: 13px;
+  font-size: $font-size-base;
   font-weight: 600;
   margin-bottom: 4px;
 }
 
 .education-card__meta {
-  font-size: 12px;
+  font-size: $font-size-sm;
   color: $color-text-muted;
 }

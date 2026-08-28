@@ -23,7 +23,7 @@
   font-family: $font-body;
   font-style: normal;
   font-weight: 600;
-  font-size: 12.5px;
+  font-size: $font-size-sm;
   letter-spacing: 1px;
   text-transform: uppercase;
   display: flex;
@@ -50,7 +50,7 @@
 }
 
 .skill-badge {
-  font-size: 12.5px;
+  font-size: $font-size-sm;
   padding: 7px 13px;
   border-radius: 20px;
   transition: transform 0.2s ease;

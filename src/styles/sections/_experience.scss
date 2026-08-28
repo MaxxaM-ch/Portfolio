@@ -135,7 +135,7 @@
 }
 
 .timeline-card__date {
-  font-size: 11px;
+  font-size: $font-size-xs;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: $color-secondary;
@@ -143,12 +143,12 @@
 }
 
 .timeline-card__title {
-  font-size: 16px;
+  font-size: $font-size-md;
   margin-bottom: 4px;
 }
 
 .timeline-card__company {
-  font-size: 12.5px;
+  font-size: $font-size-sm;
   color: $color-text-muted;
   margin-bottom: 12px;
 }
@@ -156,7 +156,7 @@
 .timeline-card__list {
   list-style: disc;
   padding-left: 18px;
-  font-size: 13px;
+  font-size: $font-size-base;
   color: $color-text-muted;
   display: flex;
   flex-direction: column;

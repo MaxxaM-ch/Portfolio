@@ -21,7 +21,7 @@
 
 .about__text {
   color: $color-text-muted;
-  font-size: 14px;
+  font-size: $font-size-base;
   line-height: 1.7;
   text-align: justify;
 
@@ -99,10 +99,10 @@
   display: block;
   font-family: $font-heading;
   font-style: italic;
-  font-size: 22px;
+  font-size: $font-size-2xl;
 }
 
 .stat__label {
-  font-size: 12px;
+  font-size: $font-size-sm;
   color: $color-secondary;
 }
