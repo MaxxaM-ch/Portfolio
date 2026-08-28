@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { copyEmail, showCopiedFeedback, showCopyFailedFeedback, showToast } from './copy-email.js';
+import { copyEmail, showCopiedFeedback, showCopyFailedFeedback, showToast } from '../copy-email.js';
 
 describe('copyEmail', () => {
   it('writes the email to the given clipboard', async () => {

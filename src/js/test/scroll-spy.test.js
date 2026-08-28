@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getActiveSectionId, isScrolledToBottom } from './scroll-spy.js';
+import { getActiveSectionId, isScrolledToBottom } from '../scroll-spy.js';
 
 describe('getActiveSectionId', () => {
   const sections = [

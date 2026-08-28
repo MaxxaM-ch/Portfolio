@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { shouldSpawnParticle } from './cursor-trail.js';
+import { shouldSpawnParticle } from '../cursor-trail.js';
 
 describe('shouldSpawnParticle', () => {
   it('spawns on the first movement (no previous position)', () => {
