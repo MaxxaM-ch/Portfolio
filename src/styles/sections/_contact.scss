@@ -89,11 +89,11 @@
   color: $color-text-muted;
   font-size: $font-size-base;
   max-width: 420px;
-  margin: 0 auto 20px;
+  margin: 0 auto $spacing-lg;
 }
 
 .contact__methods {
-  margin-bottom: 24px;
+  margin-bottom: $spacing-xl;
 }
 
 .contact__row {
@@ -101,7 +101,7 @@
   align-items: center;
   justify-content: center;
   gap: 14px;
-  margin-bottom: 16px;
+  margin-bottom: $spacing-base;
 
   &:last-child {
     margin-bottom: 0;
@@ -166,7 +166,7 @@
   background: $color-panel;
   border: 1px solid $color-border;
   color: $color-text;
-  padding: 12px 20px;
+  padding: $spacing-md $spacing-lg;
   border-radius: 6px;
   font-size: $font-size-base;
   transition: border-color 0.2s ease;
@@ -182,7 +182,7 @@
 }
 
 .email-box--icon {
-  padding: 12px;
+  padding: $spacing-md;
 }
 
 .email-box__hint {

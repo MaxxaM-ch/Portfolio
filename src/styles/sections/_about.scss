@@ -26,7 +26,7 @@
   text-align: justify;
 
   p + p {
-    margin-top: 14px;
+    margin-top: $spacing-base;
   }
 
   strong {
@@ -41,7 +41,7 @@
 }
 
 .about__soft-skills {
-  margin-top: 32px;
+  margin-top: $spacing-2xl;
 }
 
 .stat {
@@ -49,7 +49,7 @@
   overflow: hidden;
   border: 1px solid rgba($color-text, 0.15);
   border-radius: 6px;
-  padding: 16px 18px;
+  padding: $spacing-base $spacing-lg;
   background: rgba($color-text, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);

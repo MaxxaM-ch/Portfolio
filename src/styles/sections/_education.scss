@@ -13,7 +13,7 @@
   font-size: $font-size-base;
   line-height: 1.7;
   text-align: justify;
-  margin-bottom: 28px;
+  margin-bottom: $spacing-2xl;
 }
 
 .education__grid {
@@ -31,7 +31,7 @@
   overflow: hidden;
   border: 1px solid rgba($color-text, 0.15);
   border-radius: 8px;
-  padding: 20px 22px;
+  padding: $spacing-lg $spacing-xl;
   background: rgba($color-text, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -82,7 +82,7 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: $color-secondary;
-  margin-bottom: 10px;
+  margin-bottom: $spacing-md;
 }
 
 .education-card__title {
@@ -90,13 +90,13 @@
   font-style: italic;
   font-weight: 600;
   font-size: $font-size-md;
-  margin-bottom: 8px;
+  margin-bottom: $spacing-sm;
 }
 
 .education-card__school {
   font-size: $font-size-base;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: $spacing-xs;
 }
 
 .education-card__meta {

@@ -35,7 +35,7 @@
 .timeline__item {
   position: relative;
   width: 50%;
-  margin-bottom: 64px;
+  margin-bottom: $spacing-4xl;
 
   &:last-child {
     margin-bottom: 0;
@@ -54,7 +54,7 @@
   }
 
   &--left {
-    padding-right: 40px;
+    padding-right: $spacing-3xl;
 
     &::before {
       right: -6px;
@@ -63,7 +63,7 @@
 
   &--right {
     margin-left: 50%;
-    padding-left: 40px;
+    padding-left: $spacing-3xl;
 
     &::before {
       left: -6px;
@@ -73,7 +73,7 @@
   @media (max-width: $breakpoint-mobile) {
     width: 100%;
     margin-left: 0;
-    padding-left: 28px;
+    padding-left: $spacing-2xl;
     padding-right: 0;
 
     &::before {
@@ -88,7 +88,7 @@
   overflow: hidden;
   border: 1px solid rgba($color-text, 0.15);
   border-radius: 6px;
-  padding: 20px 22px;
+  padding: $spacing-lg $spacing-xl;
   background: rgba($color-text, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -139,29 +139,29 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: $color-secondary;
-  margin-bottom: 4px;
+  margin-bottom: $spacing-xs;
 }
 
 .timeline-card__title {
   font-size: $font-size-md;
-  margin-bottom: 4px;
+  margin-bottom: $spacing-xs;
 }
 
 .timeline-card__company {
   font-size: $font-size-sm;
   color: $color-text-muted;
-  margin-bottom: 12px;
+  margin-bottom: $spacing-md;
 }
 
 .timeline-card__list {
   list-style: disc;
-  padding-left: 18px;
+  padding-left: $spacing-lg;
   font-size: $font-size-base;
   color: $color-text-muted;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-bottom: 12px;
+  margin-bottom: $spacing-md;
 }
 
 .timeline-card__tags {

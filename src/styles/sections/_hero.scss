@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  padding: 110px 32px;
+  padding: $spacing-5xl $spacing-2xl;
   text-align: center;
   overflow: hidden;
 }
@@ -98,7 +98,7 @@
 
 .hero__name {
   font-size: $font-size-4xl;
-  margin: 6px 0 14px;
+  margin: $spacing-sm 0 $spacing-base;
 }
 
 .hero__name-word {
@@ -116,7 +116,7 @@
 .hero__tagline {
   color: $color-text-muted;
   max-width: 420px;
-  margin: 0 auto 26px;
+  margin: 0 auto $spacing-xl;
   font-size: $font-size-md;
 }
 
