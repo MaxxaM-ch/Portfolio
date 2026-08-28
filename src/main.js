@@ -8,6 +8,14 @@ if (timelineEl) {
   timelineEl.innerHTML = renderTimeline(experiences);
 }
 
+import { education } from './data/education.js';
+import { renderEducationList } from './js/render-education.js';
+
+const educationGridEl = document.getElementById('education-grid');
+if (educationGridEl) {
+  educationGridEl.innerHTML = renderEducationList(education);
+}
+
 import { toggleNav, closeNav } from './js/nav-toggle.js';
 
 const navLinks = document.getElementById('nav-links');
