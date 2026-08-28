@@ -28,7 +28,7 @@ npm run test
 
 ## Contenu
 
-Le contenu (texte, expériences, projets, liens sociaux, email) est provisoire — à remplacer dans `index.html` avant mise en ligne.
+Le contenu réel (expériences, parcours scolaire, compétences) vit dans `src/data/*.js`. Seule la section **Projets** est encore un placeholder générique — à remplacer avant mise en ligne.
 
 ## Déploiement
 

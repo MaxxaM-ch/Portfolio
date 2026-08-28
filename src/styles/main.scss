@@ -1,4 +1,11 @@
 @use 'variables';
 @use 'base';
 @use 'navbar';
-@use 'sections';
+@use 'sections/hero';
+@use 'sections/about';
+@use 'sections/skills';
+@use 'sections/experience';
+@use 'sections/projects';
+@use 'sections/education';
+@use 'sections/contact';
+@use 'sections/footer';

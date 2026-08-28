@@ -1,0 +1,60 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.about {
+  @include section-padding;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: start;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about__text {
+  color: $color-text-muted;
+  font-size: $font-size-base;
+  line-height: 1.7;
+  text-align: justify;
+
+  p + p {
+    margin-top: $spacing-base;
+  }
+
+  strong {
+    color: $color-text;
+  }
+}
+
+.about__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about__soft-skills {
+  margin-top: $spacing-2xl;
+}
+
+.stat {
+  @include glass-card;
+  padding: $spacing-base $spacing-lg;
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat__value {
+  display: block;
+  font-family: $font-heading;
+  font-style: italic;
+  font-size: $font-size-2xl;
+}
+
+.stat__label {
+  font-size: $font-size-sm;
+  color: $color-secondary;
+}

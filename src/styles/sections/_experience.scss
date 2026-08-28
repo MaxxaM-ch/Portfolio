@@ -1,0 +1,123 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.experience {
+  @include section-padding;
+}
+
+.timeline {
+  position: relative;
+  max-width: $content-max-width;
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: $color-border;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    &::before {
+      left: 5px;
+      transform: none;
+    }
+  }
+}
+
+.timeline__item {
+  position: relative;
+  width: 50%;
+  margin-bottom: $spacing-4xl;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $color-primary;
+    border: 3px solid $color-bg;
+    z-index: 1;
+  }
+
+  &--left {
+    padding-right: $spacing-3xl;
+
+    &::before {
+      right: -6px;
+    }
+  }
+
+  &--right {
+    margin-left: 50%;
+    padding-left: $spacing-3xl;
+
+    &::before {
+      left: -6px;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    margin-left: 0;
+    padding-left: $spacing-2xl;
+    padding-right: 0;
+
+    &::before {
+      left: -1px;
+      right: auto;
+    }
+  }
+}
+
+.timeline-card {
+  @include glass-card;
+  padding: $spacing-lg $spacing-xl;
+  transition: backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card__date {
+  font-size: $font-size-xs;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $color-secondary;
+  margin-bottom: $spacing-xs;
+}
+
+.timeline-card__title {
+  font-size: $font-size-md;
+  margin-bottom: $spacing-xs;
+}
+
+.timeline-card__company {
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+  margin-bottom: $spacing-md;
+}
+
+.timeline-card__list {
+  list-style: disc;
+  padding-left: $spacing-lg;
+  font-size: $font-size-base;
+  color: $color-text-muted;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: $spacing-md;
+}
+
+.timeline-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}

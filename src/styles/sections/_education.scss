@@ -1,0 +1,57 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.education {
+  @include section-padding;
+}
+
+.education__intro {
+  color: $color-text-muted;
+  font-size: $font-size-base;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: $spacing-2xl;
+}
+
+.education__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.education-card {
+  @include glass-card(8px);
+  padding: $spacing-lg $spacing-xl;
+  transition: backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card__level {
+  font-size: $font-size-xs;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $color-secondary;
+  margin-bottom: $spacing-md;
+}
+
+.education-card__title {
+  font-family: $font-heading;
+  font-style: italic;
+  font-weight: 600;
+  font-size: $font-size-md;
+  margin-bottom: $spacing-sm;
+}
+
+.education-card__school {
+  font-size: $font-size-base;
+  font-weight: 600;
+  margin-bottom: $spacing-xs;
+}
+
+.education-card__meta {
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+}
