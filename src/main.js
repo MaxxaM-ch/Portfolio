@@ -16,6 +16,14 @@ if (educationGridEl) {
   educationGridEl.innerHTML = renderEducationList(education);
 }
 
+import { projects } from './data/projects.js';
+import { renderProjectList } from './js/render-projects.js';
+
+const projectsGridEl = document.getElementById('projects-grid');
+if (projectsGridEl) {
+  projectsGridEl.innerHTML = renderProjectList(projects);
+}
+
 import { toggleNav, closeNav } from './js/nav-toggle.js';
 
 const navLinks = document.getElementById('nav-links');
