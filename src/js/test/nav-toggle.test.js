@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { toggleNav, closeNav } from './nav-toggle.js';
+import { toggleNav, closeNav } from '../nav-toggle.js';
 
 function makeNavEl() {
   const el = document.createElement('ul');

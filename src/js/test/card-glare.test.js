@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { computeRelativePosition } from './card-glare.js';
+import { computeRelativePosition } from '../card-glare.js';
 
 describe('computeRelativePosition', () => {
   it('returns 0%/0% at the top-left corner of the element', () => {

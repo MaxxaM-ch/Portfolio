@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { computeParallaxOffset } from './parallax.js';
+import { computeParallaxOffset } from '../parallax.js';
 
 describe('computeParallaxOffset', () => {
   it('scales scrollY by the given factor', () => {

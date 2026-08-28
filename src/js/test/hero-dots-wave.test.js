@@ -5,7 +5,7 @@ import {
   pickAnimationType,
   pickDotColor,
   pickTier,
-} from './hero-dots-wave.js';
+} from '../hero-dots-wave.js';
 
 describe('computeDotCount', () => {
   it('scales with area and target spacing density', () => {

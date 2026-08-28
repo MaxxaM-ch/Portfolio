@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { handleReveal } from './reveal-on-scroll.js';
+import { handleReveal } from '../reveal-on-scroll.js';
 
 function makeEntry(isIntersecting) {
   return {

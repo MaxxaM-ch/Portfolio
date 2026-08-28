@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { handleBackToTopVisibility } from './back-to-top.js';
+import { handleBackToTopVisibility } from '../back-to-top.js';
 
 function makeButton() {
   return { classList: { toggle: vi.fn() } };
