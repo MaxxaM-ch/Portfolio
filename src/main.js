@@ -24,6 +24,14 @@ if (projectsGridEl) {
   projectsGridEl.innerHTML = renderProjectList(projects);
 }
 
+import { skillGroups } from './data/skills.js';
+import { renderSkillGroups } from './js/render-skills.js';
+
+const skillsGroupsEl = document.getElementById('skills-groups');
+if (skillsGroupsEl) {
+  skillsGroupsEl.innerHTML = renderSkillGroups(skillGroups);
+}
+
 import { toggleNav, closeNav } from './js/nav-toggle.js';
 
 const navLinks = document.getElementById('nav-links');
