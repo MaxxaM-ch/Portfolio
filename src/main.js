@@ -17,6 +17,7 @@ import { initHeroDotsWave } from './js/hero-dots-wave.js';
 import { initCursorTrail } from './js/cursor-trail.js';
 import { initCardGlare } from './js/card-glare.js';
 import { initBackToTop } from './js/back-to-top.js';
+import { initThemeToggle } from './js/theme-toggle.js';
 
 function mount(id, render, data) {
   const el = document.getElementById(id);
@@ -133,4 +134,9 @@ const contactSection = document.getElementById('contact');
 const backToTopButton = document.getElementById('back-to-top');
 if (contactSection && backToTopButton) {
   initBackToTop(contactSection, backToTopButton);
+}
+
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  initThemeToggle(themeToggle);
 }

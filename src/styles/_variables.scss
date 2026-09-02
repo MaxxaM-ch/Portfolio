@@ -1,12 +1,26 @@
-// Colors
-$color-bg: #150F10;
-$color-bg-alt: #181112;
-$color-panel: #1D1516;
-$color-primary: #7A1F2B;
-$color-secondary: #C98B8B;
-$color-text: #F3E9E7;
-$color-text-muted: #D8C9C7;
-$color-border: rgba(243, 233, 231, 0.1);
+// Colors — resolues via des custom properties CSS (voir _theme.scss) pour
+// pouvoir changer de theme a l'execution.
+$color-bg: var(--color-bg);
+$color-bg-alt: var(--color-bg-alt);
+$color-panel: var(--color-panel);
+$color-primary: var(--color-primary);
+$color-secondary: var(--color-secondary);
+$color-text: var(--color-text);
+$color-text-muted: var(--color-text-muted);
+$color-border: var(--color-border);
+
+// $color-primary ne change pas entre les themes : le texte/icone pose dessus
+// (boutons pleins, badges, icone du toast) doit donc rester clair dans les
+// deux themes plutot que de suivre $color-text (qui s'inverse, lui).
+$color-on-primary: #F3E9E7;
+
+// Genere un rgba() a partir d'une custom property "--#{$var-name}-rgb"
+// (triplet r,g,b) definie dans _theme.scss. Utiliser a la place de
+// rgba($color-x, $opacity), qui ne fonctionne plus car $color-x n'est plus
+// une couleur SCSS mais une reference var().
+@function alpha($var-name, $opacity) {
+  @return rgba(var(--#{$var-name}-rgb), $opacity);
+}
 
 // Typography
 $font-heading: 'Fraunces', serif;

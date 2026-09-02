@@ -32,7 +32,7 @@
     text-shadow:
       -1px 1px 0 $color-primary,
       -2px 2px 0 $color-primary,
-      -3px 3px 0 rgba($color-primary, 0.7),
+      -3px 3px 0 alpha('color-primary', 0.7),
       -4px 4px 8px rgba(0, 0, 0, 0.45);
   }
 
@@ -128,6 +128,37 @@
       right: auto;
       width: 100%;
     }
+  }
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  color: $color-text;
+  padding: $spacing-xs;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+.theme-toggle__icon--moon {
+  display: none;
+}
+
+:root[data-theme='light'] {
+  .theme-toggle__icon--sun {
+    display: none;
+  }
+
+  .theme-toggle__icon--moon {
+    display: block;
   }
 }
 

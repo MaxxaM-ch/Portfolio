@@ -130,7 +130,7 @@
   }
 
   &.is-copy-failed {
-    border-color: rgba($color-text, 0.4);
+    border-color: alpha('color-text', 0.4);
   }
 }
 
