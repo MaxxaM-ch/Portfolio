@@ -11,16 +11,16 @@
 @mixin glass-card($radius: 6px) {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba($color-text, 0.15);
+  border: 1px solid alpha('glass-tint', 0.15);
   border-radius: $radius;
-  background: rgba($color-text, 0.08);
+  background: alpha('glass-tint', 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow:
     0 8px 24px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba($color-text, 0.35),
-    inset 0 -1px 0 rgba($color-text, 0.08),
-    inset 0 0 24px 8px rgba($color-text, 0.05);
+    inset 0 1px 0 alpha('glass-tint', 0.35),
+    inset 0 -1px 0 alpha('glass-tint', 0.08),
+    inset 0 0 24px 8px alpha('glass-tint', 0.05);
 
   &::before {
     content: '';
@@ -29,14 +29,14 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba($color-text, 0.6), transparent);
+    background: linear-gradient(90deg, transparent, alpha('glass-tint', 0.6), transparent);
   }
 
   &::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba($color-text, 0.12), transparent 40%);
+    background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), alpha('glass-tint', 0.12), transparent 40%);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -47,9 +47,9 @@
     -webkit-backdrop-filter: blur(24px);
     box-shadow:
       0 12px 32px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 rgba($color-text, 0.45),
-      inset 0 -1px 0 rgba($color-text, 0.1),
-      inset 0 0 28px 10px rgba($color-text, 0.07);
+      inset 0 1px 0 alpha('glass-tint', 0.45),
+      inset 0 -1px 0 alpha('glass-tint', 0.1),
+      inset 0 0 28px 10px alpha('glass-tint', 0.07);
 
     &::after {
       opacity: 1;
@@ -71,7 +71,7 @@
     right: 0;
     z-index: -1;
     width: 0;
-    background: $color-text;
+    background: alpha('glass-tint', 1);
     transition: width 0.3s ease;
   }
 

@@ -4,6 +4,6 @@
   text-align: center;
   padding: $spacing-xl;
   font-size: $font-size-sm;
-  color: rgba($color-text, 0.5);
+  color: alpha('color-text', 0.5);
   border-top: 1px solid $color-border;
 }

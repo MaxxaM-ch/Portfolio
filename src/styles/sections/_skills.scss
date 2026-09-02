@@ -37,7 +37,7 @@
 
   &--mastered { background: $color-primary; }
   &--intermediate { background: $color-secondary; }
-  &--learning { background: rgba($color-text, 0.35); }
+  &--learning { background: alpha('color-text', 0.35); }
 }
 
 .skill-badges {
@@ -58,7 +58,7 @@
 
   &--mastered {
     background: $color-primary;
-    color: $color-text;
+    color: $color-on-primary;
   }
 
   &--intermediate {
@@ -69,7 +69,7 @@
 
   &--learning {
     background: transparent;
-    border: 1px dashed rgba($color-text, 0.35);
+    border: 1px dashed alpha('color-text', 0.35);
     color: $color-text-muted;
   }
 }

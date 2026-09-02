@@ -78,8 +78,8 @@
   font-size: $font-size-base;
   color: $color-secondary;
   text-shadow:
-    0 0 6px rgba($color-secondary, 0.9),
-    0 0 14px rgba($color-primary, 0.6);
+    0 0 6px alpha('color-secondary', 0.9),
+    0 0 14px alpha('color-primary', 0.6);
   pointer-events: none;
   animation: hero-sparkle-fade 0.8s ease-out forwards;
 }

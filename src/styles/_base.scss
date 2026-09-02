@@ -91,7 +91,7 @@ section[id] {
 .btn--primary {
   @include btn-fill-hover;
   background: $color-primary;
-  color: $color-text;
+  color: $color-on-primary;
   border: none;
   transition: color 0.3s ease;
 
@@ -104,12 +104,12 @@ section[id] {
   @include btn-fill-hover;
   background: transparent;
   color: $color-text;
-  border: 1px solid rgba($color-text, 0.3);
+  border: 1px solid alpha('color-text', 0.3);
   transition: color 0.3s ease, border-color 0.3s ease;
 
   &:hover {
     color: $color-primary;
-    border-color: $color-text;
+    border-color: alpha('color-text', 0.3);
   }
 }
 
@@ -122,10 +122,10 @@ section[id] {
   align-items: center;
   gap: 10px;
   padding: $spacing-md $spacing-lg;
-  background: rgba($color-text, 0.1);
+  background: alpha('glass-tint', 0.1);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba($color-text, 0.15);
+  border: 1px solid alpha('glass-tint', 0.15);
   border-radius: 8px;
   color: $color-text;
   font-family: $font-body;
@@ -152,7 +152,7 @@ section[id] {
   height: 18px;
   border-radius: 50%;
   background: $color-primary;
-  color: $color-text;
+  color: $color-on-primary;
 
   svg {
     display: block;

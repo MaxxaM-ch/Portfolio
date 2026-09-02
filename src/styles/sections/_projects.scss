@@ -57,7 +57,7 @@
 
 .tag {
   font-size: $font-size-xs;
-  background: rgba($color-secondary, 0.12);
+  background: alpha('color-secondary', 0.12);
   color: $color-secondary;
   padding: $spacing-xs $spacing-sm;
   border-radius: 20px;
