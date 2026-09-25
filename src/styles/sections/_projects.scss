@@ -17,6 +17,8 @@
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   background: $color-panel;
   border: 1px solid $color-border;
   border-radius: 8px;
@@ -29,18 +31,24 @@
   }
 }
 
-.project-card__thumb {
-  height: 120px;
-  background-color: $color-bg;
-}
-
 .project-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: $spacing-base $spacing-lg;
 }
 
 .project-card__title {
   font-size: $font-size-md;
   margin-bottom: $spacing-sm;
+}
+
+.project-card__link {
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: $spacing-sm;
+  font-size: $font-size-sm;
+  color: $color-secondary;
 }
 
 .project-card__desc {

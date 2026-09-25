@@ -1,22 +1,24 @@
 export const projects = [
   {
-    title: 'Projet Un',
-    description: 'Courte description du projet et de son objectif.',
-    tags: ['React', 'Node.js'],
+    title: 'UsedPark',
+    description: "Plateforme de location de machines de gestion des déchets entre agences de l'entreprise.",
+    tags: ['Angular', 'TypeScript', 'SCSS', 'Docker'],
+    extraTagsCount: 3,
   },
   {
-    title: 'Projet Deux',
-    description: 'Courte description du projet et de son objectif.',
-    tags: ['Vanilla JS', 'CSS'],
+    title: 'SchoolMarks',
+    description: 'CRM dédié à la gestion des notes et des présences des écoles supérieures françaises.',
+    tags: ['React', 'LessCSS', 'TypeScript', 'Docker', 'PostgreSQL'],
   },
   {
-    title: 'Projet Trois',
-    description: 'Courte description du projet et de son objectif.',
-    tags: ['API', 'Figma'],
+    title: 'Site vitrine des Canadiens',
+    description: "Landing page à l'effigie des Canadiens de Montréal.",
+    tags: ['HTML', 'SCSS', 'JavaScript'],
   },
   {
-    title: 'Projet Quatre',
-    description: 'Courte description du projet et de son objectif.',
-    tags: ['React', 'Tailwind'],
+    title: 'Mini Games Hockey League',
+    description: 'Site de mini-jeux autour du hockey de la LNH.',
+    tags: ['Astro', 'React', 'SCSS', 'TypeScript', 'Vitest'],
+    url: 'https://minigameshockeyleague.netlify.app/',
   },
 ];
