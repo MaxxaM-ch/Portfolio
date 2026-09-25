@@ -14,11 +14,11 @@ const sampleProject = {
 };
 
 describe('renderProjectCard', () => {
-  it('renders the thumb, title, description and tags in an article.project-card', () => {
+  it('renders the title, description and tags in an article.project-card, without a thumbnail', () => {
     const card = parse(renderProjectCard(sampleProject));
 
     expect(card.querySelector('article.project-card')).not.toBeNull();
-    expect(card.querySelector('.project-card__thumb')).not.toBeNull();
+    expect(card.querySelector('.project-card__thumb')).toBeNull();
     expect(card.querySelector('.project-card__title').textContent).toBe(sampleProject.title);
     expect(card.querySelector('.project-card__desc').textContent).toBe(sampleProject.description);
 
@@ -26,6 +26,33 @@ describe('renderProjectCard', () => {
     expect(tags).toHaveLength(2);
     expect(tags[0].textContent).toBe('React');
     expect(tags[1].textContent).toBe('Node.js');
+  });
+
+  it('appends a "+N" tag when extraTagsCount is set', () => {
+    const project = { ...sampleProject, extraTagsCount: 3 };
+    const tags = parse(renderProjectCard(project)).querySelectorAll('.project-card__tags .tag');
+
+    expect(tags).toHaveLength(3);
+    expect(tags[2].textContent).toBe('+3');
+  });
+
+  it('renders as a link with a "Voir le site" label when a url is provided', () => {
+    const project = { ...sampleProject, url: 'https://example.com' };
+    const card = parse(renderProjectCard(project));
+
+    const link = card.querySelector('a.project-card');
+    expect(link).not.toBeNull();
+    expect(link.getAttribute('href')).toBe('https://example.com');
+    expect(link.getAttribute('target')).toBe('_blank');
+    expect(link.getAttribute('rel')).toBe('noopener noreferrer');
+    expect(card.querySelector('.project-card__link').textContent).toContain('Voir le site');
+  });
+
+  it('renders as a plain article with no link label when there is no url', () => {
+    const card = parse(renderProjectCard(sampleProject));
+    expect(card.querySelector('a.project-card')).toBeNull();
+    expect(card.querySelector('article.project-card')).not.toBeNull();
+    expect(card.querySelector('.project-card__link')).toBeNull();
   });
 });
 
